@@ -74,10 +74,13 @@
         </div>
         <div class="col-sm-6">
             <div class="card card-container">
-                <form class="form-signin">
+                <form class="form-signin" method="post" action="/loginUser">
                     <span id="reauth-email" class="reauth-email"></span>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+
+                    <input type="text" id="userName" class="form-control" placeholder="Username" required autofocus>
+
                     <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
                     <div id="remember" class="checkbox">
                         <label>
                             <input type="checkbox" value="remember-me"> Remember me

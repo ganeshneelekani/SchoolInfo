@@ -23,4 +23,11 @@ public class LoginController {
         LOGGER.info("==========1======");
         return "redirect:/LoginPage.htm";
     }
+
+    @RequestMapping(value = "/loginUser", method = RequestMethod.GET)
+    public String loginUser() {
+
+        LOGGER.info("==========1======");
+        return "redirect:/LoginPage.htm";
+    }
 }
