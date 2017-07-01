@@ -21,6 +21,6 @@ public class LoginController {
     public String redirect() {
 
         LOGGER.info("==========1======");
-        return "redirect:/LoginPage.html";
+        return "redirect:/LoginPage.htm";
     }
 }
