@@ -2,48 +2,48 @@ package org.StudentInfo.model.student;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 import java.util.Map;
 import java.util.Set;
 
 @Entity
-@Table(name="STUDENT")
-public class Student{
+@Table(name = "STUDENT")
+public class Student {
 
-    @Column(name="STUDENT_ID")
+    @Id
+    @Column(name = "STUDENT_ID")
     private String studentId;
 
-    @Column(name="STUDENT_NAME")
+    @Column(name = "STUDENT_NAME")
     private String studentName;
 
-    @Column(name="STUDENT_GENDER")
+    @Column(name = "STUDENT_GENDER")
     private String StudentGender;
 
-    @Column(name="STUDENT_BDATE")
+    @Column(name = "STUDENT_BDATE")
     private Date StudentBDate;
 
-    @Column(name="STUDENT_CLASS")
+    @Column(name = "STUDENT_CLASS")
     private String studentClass;
 
-    @Column(name="STUDENT_SECTION")
+    @Column(name = "STUDENT_SECTION")
     private String studentSection;
 
-    @Column(name="CLASS_TEACHER")
-    private String classTeacher;
+    @Column(name = "CLASS_TEACHER_ID")
+    private String classTeacherId;
 
-    private Set<StudentSubjectDetail> studentSubjects;
-
-    @Column(name="STUDENT_ADDRESS")
+    @Column(name = "STUDENT_ADDRESS")
     private String studentAddress;
 
-    @Column(name="GUEARDIAN_NAME")
+    @Column(name = "GUARDIAN_NAME")
     private String guardianName;
 
-    @Column(name="GUARDIAN_EMAIL_ADDRESS")
+    @Column(name = "GUARDIAN_EMAIL_ADDRESS")
     private String guardianEmailAddress;
 
-    @Column(name="GUARDIAN_CONTACT_NUMBER")
+    @Column(name = "GUARDIAN_CONTACT_NUMBER")
     private String gurdianContectNumber;
 
     public String getStudentId() {
@@ -94,20 +94,12 @@ public class Student{
         this.studentSection = studentSection;
     }
 
-    public String getClassTeacher() {
-        return classTeacher;
+    public String getClassTeacherId() {
+        return classTeacherId;
     }
 
-    public void setClassTeacher(String classTeacher) {
-        this.classTeacher = classTeacher;
-    }
-
-    public Set<StudentSubjectDetail> getStudentSubjects() {
-        return studentSubjects;
-    }
-
-    public void setStudentSubjects(Set<StudentSubjectDetail> studentSubjects) {
-        this.studentSubjects = studentSubjects;
+    public void setClassTeacherId(String classTeacherId) {
+        this.classTeacherId = classTeacherId;
     }
 
     public String getStudentAddress() {

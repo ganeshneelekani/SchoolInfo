@@ -14,9 +14,9 @@
     <resources location="/WEB-INF/views/" mapping="/**">
     </resources>
 
-    <context:component-scan base-package="org.StudentInfo.controller">
+    <context:component-scan base-package="org.StudentInfo">
     </context:component-scan>
-
+    <tx:annotation-driven/>
 
     <beans:bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -40,6 +40,7 @@
         <beans:property name="annotatedClasses">
             <beans:list>
                 <beans:value>org.arpit.java2blog.model.Country</beans:value>
+                <beans:value>org.StudentInfo.model.student.Student</beans:value>
             </beans:list>
         </beans:property>
         <beans:property name="hibernateProperties">
