@@ -13,6 +13,7 @@ $(document).ready(function() {
         "Please check your input."
     );
 
+
     // validate signup form on keyup and submit
     $("#loginForm").validate({
 

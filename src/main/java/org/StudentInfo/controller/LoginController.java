@@ -29,14 +29,14 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response) {
+    public ModelAndView userLogin(HttpServletRequest request, HttpServletResponse response) {
         ModelAndView mav = new ModelAndView("login");
         mav.addObject("login", new Login());
         return mav;
     }
 
     @RequestMapping(value = "/loginUser", method = RequestMethod.POST)
-    public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response,
+    public ModelAndView validateLogin(HttpServletRequest request, HttpServletResponse response,
             @ModelAttribute("login") Login user) {
 
         LOGGER.info(user.getUsername()+"   ======== UserName ");

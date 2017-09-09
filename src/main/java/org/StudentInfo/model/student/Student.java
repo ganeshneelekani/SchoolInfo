@@ -20,10 +20,10 @@ public class Student {
     private String studentName;
 
     @Column(name = "STUDENT_GENDER")
-    private String StudentGender;
+    private String studentGender;
 
     @Column(name = "STUDENT_BDATE")
-    private Date StudentBDate;
+    private Date studentBDate;
 
     @Column(name = "STUDENT_CLASS")
     private String studentClass;
@@ -31,8 +31,8 @@ public class Student {
     @Column(name = "STUDENT_SECTION")
     private String studentSection;
 
-    @Column(name = "CLASS_TEACHER_ID")
-    private String classTeacherId;
+    @Column(name = "CLASS_TEACHER_NAME")
+    private String classTeacherName;
 
     @Column(name = "STUDENT_ADDRESS")
     private String studentAddress;
@@ -44,7 +44,10 @@ public class Student {
     private String guardianEmailAddress;
 
     @Column(name = "GUARDIAN_CONTACT_NUMBER")
-    private String gurdianContectNumber;
+    private String gurdianContactNumber;
+
+    @Column(name = "PASSWORD")
+    private String password;
 
     public String getStudentId() {
         return studentId;
@@ -63,19 +66,19 @@ public class Student {
     }
 
     public String getStudentGender() {
-        return StudentGender;
+        return studentGender;
     }
 
     public void setStudentGender(String studentGender) {
-        StudentGender = studentGender;
+        this.studentGender = studentGender;
     }
 
     public Date getStudentBDate() {
-        return StudentBDate;
+        return studentBDate;
     }
 
     public void setStudentBDate(Date studentBDate) {
-        StudentBDate = studentBDate;
+        this.studentBDate = studentBDate;
     }
 
     public String getStudentClass() {
@@ -94,12 +97,12 @@ public class Student {
         this.studentSection = studentSection;
     }
 
-    public String getClassTeacherId() {
-        return classTeacherId;
+    public String getClassTeacherName() {
+        return classTeacherName;
     }
 
-    public void setClassTeacherId(String classTeacherId) {
-        this.classTeacherId = classTeacherId;
+    public void setClassTeacherName(String classTeacherName) {
+        this.classTeacherName = classTeacherName;
     }
 
     public String getStudentAddress() {
@@ -126,11 +129,19 @@ public class Student {
         this.guardianEmailAddress = guardianEmailAddress;
     }
 
-    public String getGurdianContectNumber() {
-        return gurdianContectNumber;
+    public String getGurdianContactNumber() {
+        return gurdianContactNumber;
     }
 
-    public void setGurdianContectNumber(String gurdianContectNumber) {
-        this.gurdianContectNumber = gurdianContectNumber;
+    public void setGurdianContactNumber(String gurdianContactNumber) {
+        this.gurdianContactNumber = gurdianContactNumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

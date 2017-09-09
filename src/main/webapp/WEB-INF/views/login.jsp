@@ -13,10 +13,10 @@
       <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
       <link href="bootstrap/css/jquery.validation.css" rel="stylesheet">
       <!-- Google Fonts -->
-      <link href='https://fonts.googleapis.com/css?family=Passion+One'
-         rel='stylesheet' type='text/css'>
-      <link href='https://fonts.googleapis.com/css?family=Oxygen'
-         rel='stylesheet' type='text/css'>
+      <link href='bootstrap/js/common/PassionOne.css'
+                    rel='stylesheet' type='text/css'>
+                 <link href='bootstrap/js/common/Oxygen.css'
+                    rel='stylesheet' type='text/css'>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
          integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
          crossorigin="anonymous"></script>
@@ -59,6 +59,7 @@
                      <li><a class="nav-link-dropdown nav-item" href="#">Something </a></li>
                      <li role="separator" class="divider"></li>
                      <li><a class="nav-link-dropdown nav-item" href="#">Separated link</a></li>
+                     <li><a class="nav-link-dropdown nav-item" href="/SchoolInfo/RegisterStudent">Register Student</a></li>
                   </ul>
                </li>
             </ul>
@@ -79,17 +80,17 @@
                      <table align="center">
                         <tr>
                            <td>
-                              <form:input path="username" name="username" id="username" placeholder="Username" class="form-control" data-validation="[NOTEMPTY]" />
+                              <form:input path="username" name="username" id="username" placeholder="Username" class="form-control"  />
                            </td>
                         </tr>
                         <tr>
                            <td>
-                              <form:password path="password" name="password" id="password" placeholder="password" class="form-control" data-validation="[NOTEMPTY]" />
+                              <form:password path="password" name="password" id="password" placeholder="password" class="form-control"  />
                            </td>
                         </tr>
                         <tr>
                            <td>
-                              <form:button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</form:button>
+                              <form:button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" id="submit" >Sign in</form:button>
                            </td>
                         </tr>
                         <tr>
