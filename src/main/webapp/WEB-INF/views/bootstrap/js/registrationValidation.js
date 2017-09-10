@@ -21,7 +21,8 @@ $(document).ready(function() {
     );
     $.validator.addMethod("notEqual", function(value, element, param) {
         return this.optional(element) || value != param;
-    }, "Please specify a different (non-default) value");
+    }, "Please specify a different value");
+
     // validate signup form on keyup and submit
     $("#studentRegistration").validate({
         //                onkeyup: false,
@@ -45,11 +46,17 @@ $(document).ready(function() {
             studentBDate: {
                 required: true
             },
-            studentClass: {
-                required: true
+            studentGender: {
+                required: true,
+                notEqual: "Select Gender"
             },
-            classTeacherName: {
-                required: true
+            studentClass: {
+                required: true,
+                notEqual: "Select Class"
+            },
+            classTeacherId: {
+                required: true,
+                notEqual: "Select Faculty Id"
             },
             studentAddress: {
                 required: true,
@@ -57,12 +64,13 @@ $(document).ready(function() {
             },
             guardianName: {
                 required: true,
-                regex: /^[A-Za-z]{2,50}$/,
+                regex: /^[A-Za-z ]{2,50}$/,
                 minlength: 2,
                 maxlength: 50,
             },
             studentSection: {
-                required: true
+                required: true,
+                notEqual: "Select Section"
             },
             guardianEmailAddress: {
                 required: true,
@@ -107,7 +115,7 @@ $(document).ready(function() {
             studentAddress: {
                 required: "Please provide a Student Address"
             },
-            classTeacherName: {
+            classTeacherId: {
                 required: "Please provide a Class Teacher Name"
             },
             guardianEmailAddress: {

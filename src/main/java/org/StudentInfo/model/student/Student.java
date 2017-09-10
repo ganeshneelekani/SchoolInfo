@@ -31,8 +31,8 @@ public class Student {
     @Column(name = "STUDENT_SECTION")
     private String studentSection;
 
-    @Column(name = "CLASS_TEACHER_NAME")
-    private String classTeacherName;
+    @Column(name = "CLASS_TEACHER_ID")
+    private String classTeacherId;
 
     @Column(name = "STUDENT_ADDRESS")
     private String studentAddress;
@@ -97,12 +97,12 @@ public class Student {
         this.studentSection = studentSection;
     }
 
-    public String getClassTeacherName() {
-        return classTeacherName;
+    public String getClassTeacherId() {
+        return classTeacherId;
     }
 
-    public void setClassTeacherName(String classTeacherName) {
-        this.classTeacherName = classTeacherName;
+    public void setClassTeacherId(String classTeacherId) {
+        this.classTeacherId = classTeacherId;
     }
 
     public String getStudentAddress() {

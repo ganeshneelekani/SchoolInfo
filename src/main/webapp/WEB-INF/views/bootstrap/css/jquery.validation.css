@@ -376,6 +376,8 @@ select.error,
 textarea.error {
     color: #D95C5C !important;
     border-color: #D95C5C !important;
+    font-size: initial;
+    font-family: initial;
 }
 
 

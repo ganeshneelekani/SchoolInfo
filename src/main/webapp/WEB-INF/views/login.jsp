@@ -80,12 +80,12 @@
                      <table align="center">
                         <tr>
                            <td>
-                              <form:input path="username" name="username" id="username" placeholder="Username" class="form-control"  />
+                              <form:input path="username" name="username" id="username" placeholder="Student Id" class="form-control"  />
                            </td>
                         </tr>
                         <tr>
                            <td>
-                              <form:password path="password" name="password" id="password" placeholder="password" class="form-control"  />
+                              <form:password path="password" name="password" id="password" placeholder="Password" class="form-control"  />
                            </td>
                         </tr>
                         <tr>

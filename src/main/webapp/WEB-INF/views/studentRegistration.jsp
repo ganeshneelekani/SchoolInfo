@@ -1,13 +1,14 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
    <head>
       <meta charset="UTF-8">
       <title>Login Information</title>
       <script
-         src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+         type="text/javascript" src="bootstrap/js/common/jquery.min.js"></script>
+      <script type="text/javascript" src="bootstrap/js/common/jquery.validate.min.js"></script>
       <!-- Website CSS style -->
       <!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
       <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -22,7 +23,6 @@
          crossorigin="anonymous"></script>
       <script type="text/javascript" src="bootstrap/js/registrationValidation.js"></script> 
       <script type="text/javascript" src="bootstrap/js/datePicker.js"></script> 
-
    </head>
    <body>
       <script type='text/javascript'>
@@ -99,7 +99,7 @@
          <div >
             <div class="panel panel-default">
                <div class="panel-body">
-                  <form:form id="studentRegistration" modelAttribute="studentRegistration" action="/SchoolInfo/RegisterStudent" method="post" class="form-signin" enctype="multipart/form-data">
+                  <form:form id="studentRegistration" modelAttribute="studentRegistration" action="/SchoolInfo/RegisterStudentDetails" method="post" class="form-signin">
                      <div class="form-group">
                         <form:input type="text" path="studentId" name="studentId" id="studentId" class="form-control" placeholder="Student ID"/>
                      </div>
@@ -110,8 +110,9 @@
                         <div class="col-xs-6 col-sm-6 col-md-6">
                            <div class="form-group">
                               <form:select type="text" path="studentGender" name="studentGender" id="studentGender" class="form-control" placeholder="Gender">
-                                 <option>MALE</option>
-                                 <option>FEMALE</option>
+                                 <option>Select Gender</option>
+                                 <option>Male</option>
+                                 <option>Female</option>
                               </form:select>
                            </div>
                         </div>
@@ -124,17 +125,43 @@
                      <div class="row">
                         <div class="col-xs-4 col-sm-4 col-md-4">
                            <div class="form-group">
-                              <form:input type="text" path="classTeacherName" name="classTeacherName" id="classTeacherName" class="form-control" placeholder="Class Teacher"/>
+                              <form:select type="text" path="classTeacherId" name="classTeacherId" id="classTeacherId" class="form-control" placeholder="Class Teacher">
+                                 <option>Select Faculty Id</option>
+                                 <c:forEach var="listValue" items="${faculties}">
+                                    <option>
+                                       <c:out value="${listValue.teacherId}" />
+                                    </option>
+                                 </c:forEach>
+                              </form:select>
                            </div>
                         </div>
                         <div class="col-xs-4 col-sm-4 col-md-4">
                            <div class="form-group">
-                              <form:input type="text" path="studentClass" name="studentClass" id="studentClass" class="form-control" placeholder="Student Class"/>
+                              <form:select type="text" path="studentClass" name="studentClass" id="studentClass" class="form-control" placeholder="Gender">
+                                 <option>Select Class</option>
+                                 <option>I</option>
+                                 <option>II</option>
+                                 <option>III</option>
+                                 <option>IV</option>
+                                 <option>V</option>
+                                 <option>VI</option>
+                                 <option>VII</option>
+                                 <option>VIII</option>
+                                 <option>IX</option>
+                                 <option>X</option>
+                              </form:select>
                            </div>
                         </div>
                         <div class="col-xs-4 col-sm-4 col-md-4">
                            <div class="form-group">
-                              <form:input type="text" path="studentSection" name="studentSection" id="studentSection" class="form-control" placeholder="Student Section"/>
+                              <form:select type="text" path="studentSection" name="studentSection" id="studentSection" class="form-control" placeholder="Gender">
+                                 <option>Select Section</option>
+                                 <option> A </option>
+                                 <option> B </option>
+                                 <option> C </option>
+                                 <option> D </option>
+                                 <option> E </option>
+                              </form:select>
                            </div>
                         </div>
                      </div>
@@ -164,7 +191,7 @@
                         </div>
                      </div>
                </div>
-               <form:button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" id="submit" >Register</form:button>
+               <form:button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" id="submit" > Submit </form:button>
             </div>
             </form:form>
          </div>
