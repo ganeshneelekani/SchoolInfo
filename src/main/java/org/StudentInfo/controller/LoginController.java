@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.StudentInfo.model.Login;
 import org.StudentInfo.service.LoginService;
 import org.apache.log4j.Logger;
-import org.dom4j.rule.Mode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -39,9 +38,6 @@ public class LoginController {
     public ModelAndView validateLogin(HttpServletRequest request, HttpServletResponse response,
             @ModelAttribute("login") Login user) {
 
-        LOGGER.info(user.getUsername()+"   ======== UserName ");
-        LOGGER.info(user.getPassword()+"   ======== Password ");
-
         loginService.listofStudent();
 
         return new ModelAndView("login");
@@ -51,7 +47,7 @@ public class LoginController {
     public ModelAndView addUserGetRequest(HttpServletRequest request, HttpServletResponse response,
             @ModelAttribute("login") Login user) {
 
-        LOGGER.info("=========================3=========");
+
 
         ModelAndView mav = new ModelAndView("login");
         mav.addObject("login", new Login());
